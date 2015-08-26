@@ -35,7 +35,7 @@
                 <div class="inner">
                     <h3 class="masthead-brand">Philip Wright- Christie</h3>
                     <nav>
-                        <ul class="nav masthead-nav">
+                        <ul class="nav masthead-nav hidden-sm hidden-xs">
                             <li><a href="#contact" class="contactLink">Contact</a></li>
                         </ul>
                     </nav>
@@ -66,23 +66,21 @@
                 <h1 class="cover-heading">Contact Me</h1>
 
                 <div class="row">
-                    <div class="col-md-3">
-                        <p class="lead"><i class="fa fa-envelope-o"></i></p>
-
-                        <p><a href="mailto:philwc@gmail.com">philwc@gmail.com</a></p>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:philwc@gmail.com">philwc@gmail.com</a></p>
                     </div>
 
-                    <div class="col-md-3">
-                        <p class="lead"><i class="fa fa-phone"></i></p>
-                        <a href="tel:07554008384">07554008384</a>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <p><i class="fa fa-phone"></i> <a href="tel:07554008384">07554008384</a></p>
                     </div>
-                    <div class="col-md-3">
-                        <p class="lead"><i class="fa fa-facebook-official"></i></p>
-                        <a href="https://www.facebook.com/philwc">philwc</a>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <p>
+                            <i class="fa fa-facebook-official"></i> <a
+                                href="https://www.facebook.com/philwc">philwc</a>
+                        </p>
                     </div>
-                    <div class="col-md-3">
-                        <p class="lead"><i class="fa fa-twitter-square"></i></p>
-                        <a href="https://twitter.com/philwc0">@philwc0</a>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <p><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/philwc0">@philwc0</a></p>
                     </div>
                 </div>
             </div>
@@ -101,7 +99,7 @@
     function hideContact() {
         $('.contact').hide('fast');
         $('.contactLink').show('fast');
-        $('.masthead').css('margin-bottom', '0').css('position', 'fixed');
+        $('.masthead').css('margin-bottom', '0').css('position', '');
     }
 
     $(window).scroll(function () {
