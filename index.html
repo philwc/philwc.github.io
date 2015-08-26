@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="The homepage and contact details of Philip Wright- Christie">
+    <meta name="author" content="Philip Wright Christie <philwc@gmail.com>">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Philip Wright- Christie</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/site.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Philip Wright- Christie</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="#contact" class="contactLink">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <h1 class="cover-heading">I am a PHP expert</h1>
+
+                <p class="lead">with over ten years experience.</p>
+
+                <p>
+                    In my current position, I am the lead developer for <a href="https://www.stressfreeprint.co.uk">StressFreePrint</a>.
+                    In this position I manage/develop both customer facing sites as well as internal systems (order
+                    management, reporting etc).
+                </p>
+
+                <p>You can also find me over at <a href="https://github.com/philwc">Github</a></p>
+
+                <p>If you want any more information about me, including CV etc. please feel free to get in touch!</p>
+
+                <p class="lead">
+                    <a href="#contact" class="contactLink btn btn-lg btn-default">Contact Me</a>
+                </p>
+            </div>
+
+            <div class="inner contact" id="contact" style="display: none">
+                <h1 class="cover-heading">Contact Me</h1>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <p class="lead"><i class="fa fa-envelope-o"></i></p>
+
+                        <p><a href="mailto:philwc@gmail.com">philwc@gmail.com</a></p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p class="lead"><i class="fa fa-phone"></i></p>
+                        <a href="tel:07554008384">07554008384</a>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead"><i class="fa fa-facebook-official"></i></p>
+                        <a href="https://www.facebook.com/philwc">philwc</a>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead"><i class="fa fa-twitter-square"></i></p>
+                        <a href="https://twitter.com/philwc0">@philwc0</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    function showContact() {
+        $('.contact').show('fast');
+        $('.contactLink').hide('fast');
+        $('.masthead').css('margin-bottom', '50px').css('position', 'relative');
+    }
+
+    function hideContact() {
+        $('.contact').hide('fast');
+        $('.contactLink').show('fast');
+        $('.masthead').css('margin-bottom', '0').css('position', 'fixed');
+    }
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() !== 0) {
+            showContact();
+        } else {
+            hideContact();
+        }
+    });
+
+    $(document).ready(function () {
+        $('a.contactLink').click(function () {
+            $('.contact').fadeIn('fast');
+            $('html,body').animate({
+                scrollTop: $('.contact').offset().top
+            });
+        });
+    });
+</script>
+</body>
+</html>
