@@ -118,7 +118,7 @@
 
     $(document).ready(function () {
         $('a.contactLink').click(function () {
-            $('.contact').fadeIn('fast');
+            showContact();
             $('html,body').animate({
                 scrollTop: $('.contact').offset().top
             });
