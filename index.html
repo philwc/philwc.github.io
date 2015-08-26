@@ -57,12 +57,12 @@
 
                 <p>If you want any more information about me, including CV etc. please feel free to get in touch!</p>
 
-                <p class="lead">
+                <p class="lead hidden-sm hidden-xs">
                     <a href="#contact" class="contactLink btn btn-lg btn-default">Contact Me</a>
                 </p>
             </div>
 
-            <div class="inner contact" id="contact" style="display: none">
+            <div class="inner contact hidden-md hidden-lg" id="contact">
                 <h1 class="cover-heading">Contact Me</h1>
 
                 <div class="row">
@@ -91,15 +91,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
     function showContact() {
-        $('.contact').show('fast');
-        $('.contactLink').hide('fast');
-        $('.masthead').css('margin-bottom', '50px').css('position', 'relative');
+        if (!$('#contact').is(':visible')) {
+            $('.contact').show();
+            $('.contact').removeClass('hidden-md hidden-lg');
+            $('.contactLink').hide();
+            $('.masthead').css('margin-bottom', '50px').css('position', 'relative');
+        }
     }
 
     function hideContact() {
-        $('.contact').hide('fast');
-        $('.contactLink').show('fast');
-        $('.masthead').css('margin-bottom', '0').css('position', '');
+        if ($('#contact').is(':visible') && $(window).width() > 992) {
+            $('.contact').hide();
+            $('.contact').addClass('hidden-md hidden-lg');
+            $('.contactLink').show();
+            $('.masthead').css('margin-bottom', '0').css('position', '');
+        }
     }
 
     $(window).scroll(function () {
