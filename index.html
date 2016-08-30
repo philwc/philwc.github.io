@@ -33,54 +33,48 @@
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Philip Wright- Christie</h3>
-                    <nav>
-                        <ul class="nav masthead-nav hidden-sm hidden-xs">
-                            <li><a href="#contact" class="contactLink">Contact</a></li>
-                        </ul>
-                    </nav>
+                    <h1 class="masthead-brand">Philip Wright- Christie</h1>
                 </div>
             </div>
 
+            <hr class="visible-xs-block">
+
             <div class="inner cover">
-                <h1 class="cover-heading">I am a PHP expert</h1>
+                <h2 class="cover-heading">I am a PHP expert</h2>
 
                 <p class="lead">with over ten years experience.</p>
 
-                <p>
-                    In my current position, I am the lead developer for <a href="https://www.stressfreeprint.co.uk">StressFreePrint</a>.
-                    In this position I manage/develop both customer facing sites as well as internal systems (order
-                    management, reporting etc).
+                <p>In my current position, I am a senior developer for <a href="https://buildempire.co.uk/">BuildEmpire
+                    Ltd.</a>, working on an E-Learning
+                    platform for a large client.
                 </p>
-
-                <p>You can also find me over at <a href="https://github.com/philwc">Github</a></p>
+                <p> Previously, I have been the lead developer for <a href="https://www.stressfreeprint.co.uk">StressFreePrint</a>.
+                </p>
 
                 <p>If you want any more information about me, including CV etc. please feel free to get in touch!</p>
-
-                <p class="lead hidden-sm hidden-xs">
-                    <a href="#contact" class="contactLink btn btn-lg btn-default">Contact Me</a>
-                </p>
             </div>
 
-            <div class="inner contact hidden-md hidden-lg" id="contact">
-                <h1 class="cover-heading">Contact Me</h1>
+            <div class="inner contact" id="contact">
+                <h3 class="cover-heading">Contact Me</h3>
 
                 <div class="row">
                     <div class="col-xs-6 col-md-3 text-center">
-                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:philwc@gmail.com">philwc@gmail.com</a></p>
+                        <p><i class="fa fa-envelope-o"></i> <a title="Email" href="mailto:philwc@gmail.com">philwc@gmail.com</a>
+                        </p>
                     </div>
 
                     <div class="col-xs-6 col-md-3 text-center">
-                        <p><i class="fa fa-phone"></i> <a href="tel:07554008384">07554008384</a></p>
+                        <p><i class="fa fa-phone"></i> <a title="Mobile" href="tel:07554008384">07554008384</a></p>
                     </div>
+
                     <div class="col-xs-6 col-md-3 text-center">
-                        <p>
-                            <i class="fa fa-facebook-official"></i> <a
-                                href="https://www.facebook.com/philwc">philwc</a>
+                        <p><i class="fa fa-twitter"></i> <a title="Twitter"
+                                                            href="https://twitter.com/philwc0">@philwc0</a></p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <p><i class="fa fa-github"></i> <a title="Github" href="https://github.com/philwc">philwc</a>
                         </p>
-                    </div>
-                    <div class="col-xs-6 col-md-3 text-center">
-                        <p><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/philwc0">@philwc0</a></p>
                     </div>
                 </div>
             </div>
@@ -89,48 +83,20 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script>
-    function showContact() {
-        if (!$('#contact').is(':visible')) {
-            $('.contact').show();
-            $('.contact').removeClass('hidden-md hidden-lg');
-            $('.contactLink').hide();
-            $('.masthead').css('margin-bottom', '50px').css('position', 'relative');
-        }
-    }
 
-    function hideContact() {
-        if ($('#contact').is(':visible') && $(window).width() > 992) {
-            $('.contact').hide();
-            $('.contact').addClass('hidden-md hidden-lg');
-            $('.contactLink').show();
-            $('.masthead').css('margin-bottom', '0').css('position', '');
-        }
-    }
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() !== 0) {
-            showContact();
-        } else {
-            hideContact();
-        }
-    });
-
-    $(document).ready(function () {
-        $('a.contactLink').click(function () {
-            showContact();
-            $('html,body').animate({
-                scrollTop: $('.contact').offset().top
-            });
-        });
-    });
-</script>
 <!-- Google Analytics -->
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-6930105-1', 'auto');
     ga('send', 'pageview');
