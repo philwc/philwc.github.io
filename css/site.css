@@ -7,7 +7,11 @@ a,
 a:focus,
 a:hover {
     /*color: #ccc;*/
-    color: #96003D;
+    color: #FF8700;
+}
+
+.contact a, .contact a:focus, .contact a:hover{
+    color: #fff;
 }
 
 /*
@@ -23,7 +27,6 @@ body {
 body {
     color: #fff;
     text-align: center;
-    /* font-size: 20px;*/
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -69,8 +72,13 @@ body {
     width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
+    body{
+        font-size: 16px;
+    }
+}
 
+@media (min-width: 768px) {
     .masthead-brand {
         float: left;
     }
@@ -84,6 +92,11 @@ body {
     /* Start the vertical centering */
     .site-wrapper-inner {
         vertical-align: middle;
+    }
+
+    .contact{
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
