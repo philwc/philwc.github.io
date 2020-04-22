@@ -15,18 +15,86 @@
 
     <style>
         body {
-            font-size: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .head-highlight {
+            font-size: 2rem;
+        }
+
+        .tech-highlight {
+            font-size: 1.8rem;
+        }
+
+        @media (min-width: 576px) {
+            body {
+                font-size: 1.2rem;
+            }
+
+            .head-highlight {
+                font-size: 3.2rem;
+            }
+
+            .tech-highlight {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+        @media (min-width: 768px) {
+            body {
+                font-size: 1.2rem;
+            }
+
+            .head-highlight {
+                font-size: 3.2rem;
+            }
+
+            .tech-highlight {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            body {
+                font-size: 1.3rem;
+            }
+
+            .head-highlight {
+                font-size: 3.5rem;
+            }
+
+            .tech-highlight {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            body {
+                font-size: 1.5rem;
+            }
+
+            .head-highlight {
+                font-size: 4rem;
+            }
+
+            .tech-highlight {
+                font-size: 3rem;
+            }
+        }
+
+        body {
             background: #232421;
             color: white;
         }
 
         .head-highlight {
-            font-size: 4rem;
             color: #E8117F;
         }
 
         .tech-highlight {
-            font-size: 3rem;
             color: #AE81FF;
         }
 
@@ -57,75 +125,77 @@
 </head>
 
 <body>
-    <div class="row mt-5">
-        <div class="col-8 mx-auto">
-            <p>
-                <span class="head-highlight">Hello</span> my name is <span class="head-highlight">Phil Wright-
-                    Christie</span>
-            </p>
-            <p>and I am a <span class="head-highlight">Lead
-                    DevOps Engineer</span> working at <span class="head-highlight">Gear4Music.</span>
-            </p>
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col">
+                <p>
+                    <span class="head-highlight">Hello</span> my name is <span class="head-highlight">Phil Wright-
+                        Christie</span>
+                </p>
+                <p>and I am a <span class="head-highlight">Lead
+                        DevOps Engineer</span> working at <span class="head-highlight">Gear4Music.</span>
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-8 mx-auto">
-            <p>I have over fifteen years experience working with <span class="tech-highlight">PHP</span>, as well as
-                <span class="tech-highlight">Linux</span> and <span class="tech-highlight">MySQL.</span>
-            </p>
-            <p>On a day to day basis, I work with <span class="tech-highlight">Python, Kubernetes, Helm, Ansible,
-                    Terraform</span> as well others on the <span class="tech-highlight">Google Cloud
-                    Platform.</span></p>
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col">
+                <p>I have over fifteen years experience working with <span class="tech-highlight">PHP</span>, as well as
+                    <span class="tech-highlight">Linux</span> and <span class="tech-highlight">MySQL.</span>
+                </p>
+                <p>On a day to day basis, I work with <span class="tech-highlight">Python, Kubernetes, Helm, Ansible,
+                        Terraform</span> as well others on the <span class="tech-highlight">Google Cloud
+                        Platform.</span></p>
+            </div>
         </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-8 mx-auto">
-            <p>If you fancy getting in touch, I'm available on these channels</p>
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col">
+                <p>If you fancy getting in touch, I'm available on these channels</p>
+            </div>
         </div>
-    </div>
 
-    <div class="row mt-3">
-        <div class="col-8 mx-auto contact">
-            <div class="row">
-                <div class="col text-center">
-                    <a target="_blank" title="Email" data-toggle="tooltip" data-placement="top"
-                        href="mailto:philwc@gmail.com">
-                        <i class="fa fa-envelope-o"></i> <br> philwc@gmail.com
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" title="Mobile" data-toggle="tooltip" data-placement="top" href="tel:07554008384">
-                        <i class="fa fa-phone"></i> <br> 07554008384
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"
-                        href="https://twitter.com/philwc0">
-                        <i class="fa fa-twitter"></i> <br> @philwc0
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" title="Github" data-toggle="tooltip" data-placement="top"
-                        href="https://github.com/philwc">
-                        <i class="fa fa-github"></i> <br> philwc
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" title="LinkedIn" data-toggle="tooltip" data-placement="top"
-                        href="https://www.linkedin.com/in/philwc/">
-                        <i class="fa fa-linkedin"></i> <br> philwc
-                    </a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" title="Stack Overflow" data-toggle="tooltip" data-placement="top"
-                        href="https://stackoverflow.com/story/philwc">
-                        <i class="fa fa-stack-overflow"></i> <br> philwc
-                    </a>
+        <div class="row mt-3 d-flex justify-content-center">
+            <div class="col">
+                <div class="row contact">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+                        <a target="_blank" title="Email" data-toggle="tooltip" data-placement="top"
+                            href="mailto:philwc@gmail.com">
+                            <i class="fa fa-envelope-o"></i> <br> philwc@gmail.com
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+                        <a target="_blank" title="Mobile" data-toggle="tooltip" data-placement="top"
+                            href="tel:07554008384">
+                            <i class="fa fa-phone"></i> <br> 07554008384
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+                        <a target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"
+                            href="https://twitter.com/philwc0">
+                            <i class="fa fa-twitter"></i> <br> @philwc0
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+                        <a target="_blank" title="Github" data-toggle="tooltip" data-placement="top"
+                            href="https://github.com/philwc">
+                            <i class="fa fa-github"></i> <br> philwc
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+                        <a target="_blank" title="LinkedIn" data-toggle="tooltip" data-placement="top"
+                            href="https://www.linkedin.com/in/philwc/">
+                            <i class="fa fa-linkedin"></i> <br> philwc
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center mb-3">
+                        <a target="_blank" title="Stack Overflow" data-toggle="tooltip" data-placement="top"
+                            href="https://stackoverflow.com/story/philwc">
+                            <i class="fa fa-stack-overflow"></i> <br> philwc
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
