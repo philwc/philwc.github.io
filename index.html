@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Hello, my name is Phil Wright- Christie, and I am a Senior DevOps Engineer">
+    <meta name="secret-key" content="helloworld">
     <title>Phil Wright- Christie</title>
     <style>
         body {
@@ -12,6 +13,34 @@
             font-family: 'Raleway', sans-serif;
             background: #232421;
             color: white;
+        }
+
+        body.gradient {
+            /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+            background: linear-gradient(0deg, orange, yellow, green, cyan, blue, violet);
+            background-size: 500% 500%;
+            animation: gradient 10s ease infinite;
+        }
+
+        body.gradient p,
+        body.gradient #contact {
+            background-color: #232421;
+            border-radius: 0.8em;
+            padding: 0.8em;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 50% 0%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 50% 0%;
+            }
         }
 
         .container {
@@ -57,6 +86,10 @@
 
         #contact li a:hover {
             color: #AE81FF;
+            background: -webkit-linear-gradient(#AE81FF, #E8117F);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .head-highlight {
@@ -249,6 +282,34 @@
 
         ga('create', 'UA-6930105-1', 'auto')
         ga('send', 'pageview')
+    </script>
+
+
+    <script>
+        let buffer = [];
+        let secretEnabled = false;
+        const secretKey = document.querySelector("meta[name='secret-key']").getAttribute('content');
+        document.addEventListener("keyup", function (e) {
+            // Don't bother if we've already unlocked
+            if (secretEnabled) {
+                return
+            }
+
+            // Check if our secret key is in the buffer
+            buffer.push(e.key)
+            if (buffer.join('').indexOf(secretKey) > 0) {
+                document.body.classList.add("gradient");
+                secretEnabled = true;
+                buffer = [];
+            }
+
+            // No point in keeping our buffer longer than our key
+            if (buffer.length > secretKey.length) {
+                buffer.shift();
+            }
+        });
+
+
     </script>
 </head>
 
