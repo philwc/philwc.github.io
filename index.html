@@ -15,19 +15,39 @@
         }
 
         .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: flex-start;
+        }
+
+        #blurb {
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
             width: 80%;
-            margin: 0 auto;
         }
 
         #contact {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 3em;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            margin-top: 1em;
+            width: 80%;
+            padding: 0;
         }
 
         #contact li {
+            flex: 0 1 auto;
+            align-self: auto;
             text-align: center;
             list-style: none;
+            margin: 1em;
         }
 
         #contact li a {
