@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Hello, my name is Phil Wright- Christie, and I am a Senior DevOps Engineer">
-    <meta name="secret-key" content="helloworld">
+    <meta name="secret-gradient-key" content="helloworld">
     <title>Phil Wright- Christie</title>
     <style>
         body {
@@ -23,9 +23,23 @@
             animation: gradient 10s ease infinite;
         }
 
+        body.unicorn {
+            background: linear-gradient(0deg, #C9B1FF, #FFCAF2, #FFB2B1, #FFF3AD, #BCFFBC, #A2EDFF);
+            background-size: 500% 500%;
+            animation: gradient 10s ease infinite;
+        }
+
         body.gradient p,
         body.gradient #contact {
             background-color: #272822;
+            border-radius: 0.8em;
+            padding: 0.8em;
+        }
+
+        body.unicorn p,
+        body.unicorn #contact {
+            background-color: #F8F8F2;
+            color: #272822;
             border-radius: 0.8em;
             padding: 0.8em;
         }
@@ -306,24 +320,24 @@
 
     <script>
         let buffer = [];
-        let secretEnabled = false;
-        const secretKey = document.querySelector("meta[name='secret-key']").getAttribute('content');
+        let secretGradientEnabled = false;
+        const secretGradientKey = document.querySelector("meta[name='secret-gradient-key']").getAttribute('content');
         document.addEventListener("keyup", function (e) {
             // Don't bother if we've already unlocked
-            if (secretEnabled) {
+            if (secretGradientEnabled) {
                 return
             }
 
             // Check if our secret key is in the buffer
             buffer.push(e.key)
-            if (buffer.join('').indexOf(secretKey) > 0) {
+            if (buffer.join('').indexOf(secretGradientKey) > 0) {
                 document.body.classList.add("gradient");
-                secretEnabled = true;
+                secretGradientEnabled = true;
                 buffer = [];
             }
 
             // No point in keeping our buffer longer than our key
-            if (buffer.length > secretKey.length) {
+            if (buffer.length > secretGradientKey.length) {
                 buffer.shift();
             }
         });
