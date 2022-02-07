@@ -6,7 +6,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Hello, my name is Phil Wright- Christie, and I am a Senior DevOps Engineer">
+
+    <!-- OOOOHHHH, SECRETS!-->
     <meta name="secret-gradient-key" content="helloworld">
+    <meta name="secret-unicorn-key" content="unicorn">
+
     <title>Phil Wright- Christie</title>
     <style>
         body {
@@ -17,8 +21,7 @@
         }
 
         body.gradient {
-            /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
-            background: linear-gradient(0deg, orange, yellow, green, cyan, blue, violet);
+            background: linear-gradient(0deg, #F20000, #FF6700, #FFF800, #5AFF00, #0092FF, #7700FF);
             background-size: 500% 500%;
             animation: gradient 10s ease infinite;
         }
@@ -36,12 +39,33 @@
             padding: 0.8em;
         }
 
+        body.gradient #contact li a:hover {
+            color: #C9B1FF;
+            background: -webkit-linear-gradient(#FFF800, #0092FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         body.unicorn p,
         body.unicorn #contact {
             background-color: #F8F8F2;
             color: #272822;
             border-radius: 0.8em;
             padding: 0.8em;
+        }
+
+        body.unicorn #contact li a {
+            background-color: #F8F8F2;
+            color: #272822;
+        }
+
+        body.unicorn #contact li a:hover {
+            color: #C9B1FF;
+            background: -webkit-linear-gradient(#C9B1FF, #A2EDFF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         @keyframes gradient {
@@ -96,7 +120,7 @@
         }
 
         #contact li a {
-            color: white;
+            color: #F8F8F2;
             text-decoration: none;
         }
 
@@ -298,7 +322,7 @@
             top: -50px;
             left: 0;
             background: #000000;
-            color: white;
+            color: #F8F8F2;
             padding: 8px;
             z-index: 100;
         }
@@ -321,10 +345,13 @@
     <script>
         let buffer = [];
         let secretGradientEnabled = false;
+        let secretUnicornEnabled = false;
         const secretGradientKey = document.querySelector("meta[name='secret-gradient-key']").getAttribute('content');
+        const secretUnicornKey = document.querySelector("meta[name='secret-unicorn-key']").getAttribute('content');
+
         document.addEventListener("keyup", function (e) {
             // Don't bother if we've already unlocked
-            if (secretGradientEnabled) {
+            if (secretGradientEnabled || secretUnicornEnabled) {
                 return
             }
 
@@ -336,8 +363,14 @@
                 buffer = [];
             }
 
+            if (buffer.join('').indexOf(secretUnicornKey) > 0) {
+                document.body.classList.add("unicorn");
+                secretUnicornEnabled = true;
+                buffer = [];
+            }
+
             // No point in keeping our buffer longer than our key
-            if (buffer.length > secretGradientKey.length) {
+            if (buffer.length > Math.max(secretGradientKey.length, secretUnicornKey.length)) {
                 buffer.shift();
             }
         });
@@ -352,25 +385,29 @@
     <main class="container">
         <section id="blurb">
             <p>
-                <span class="head-highlight">Hello</span> my name is <span class="head-highlight">Phil Wright-
+                <span class="head-highlight">Hello!</span> My name is <span class="head-highlight">Phil Wright-
                     Christie</span>
             </p>
-            <p>and I am a <span class="head-highlight">Lead
-                    DevOps Engineer</span> working at <span class="head-highlight">KPMG UK.</span>
+            <p>
+                and I am a <span class="head-highlight">Lead DevOps Engineer</span> working at <span
+                    class="head-highlight">KPMG UK.</span>
             </p>
 
-
-            <p>On a day to day basis, I work with <span class="tech-highlight">Terraform, Python, Kubernetes &amp;
+            <p>
+                On a day to day basis, I work with <span class="tech-highlight">Terraform, Python, Kubernetes &amp;
                     Ansible</span> as well other technologies on the <span class="tech-highlight">Google Cloud
-                    Platform.</span></p>
+                    Platform.</span>
+            </p>
 
-            <p>I currently hold the <span class="cert-highlight">Professional Cloud Architect</span>
+            <p>
+                I currently hold the <span class="cert-highlight">Professional Cloud Architect</span>
                 and <span class="cert-highlight">Professional Cloud Security Engineer</span>
-                GCP certifications</p>
+                GCP certifications
+            </p>
 
-            <p>I also have over fifteen years experience working with <span class="tech-highlight">PHP</span>, as
-                well as
-                <span class="tech-highlight">Linux</span> and <span class="tech-highlight">MySQL.</span>
+            <p>
+                I also have over fifteen years experience working with <span class="tech-highlight">PHP</span>, as
+                well as <span class="tech-highlight">Linux</span> and <span class="tech-highlight">MySQL.</span>
             </p>
         </section>
 
