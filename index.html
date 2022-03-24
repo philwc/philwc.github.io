@@ -15,9 +15,13 @@
     <style>
         body {
             font-size: 1rem;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Fira Code', monospace;
             background: #272822;
             color: #F8F8F2;
+        }
+
+        .title-line {
+            font-size: 1.8rem;
         }
 
         body.gradient {
@@ -136,6 +140,10 @@
             font-size: 2rem;
         }
 
+        .title-line .head-highlight {
+            font-size: 2.8rem;
+        }
+
         .tech-highlight {
             font-size: 1.8rem;
         }
@@ -149,8 +157,16 @@
                 font-size: 1.2rem;
             }
 
+            .title-line {
+                font-size: 2rem;
+            }
+
             .head-highlight {
                 font-size: 3.2rem;
+            }
+
+            .title-line .head-highlight {
+                font-size: 4rem;
             }
 
             .tech-highlight {
@@ -167,8 +183,16 @@
                 font-size: 1.2rem;
             }
 
+            .title-line {
+                font-size: 2rem;
+            }
+
             .head-highlight {
                 font-size: 3.2rem;
+            }
+
+            .title-line .head-highlight {
+                font-size: 4rem;
             }
 
             .tech-highlight {
@@ -185,8 +209,16 @@
                 font-size: 1.3rem;
             }
 
+            .title-line {
+                font-size: 2.1rem;
+            }
+
             .head-highlight {
                 font-size: 3.5rem;
+            }
+
+            .title-line .head-highlight {
+                font-size: 4.3rem;
             }
 
             .tech-highlight {
@@ -203,8 +235,16 @@
                 font-size: 1.5rem;
             }
 
+            .title-line {
+                font-size: 2.3rem;
+            }
+
             .head-highlight {
                 font-size: 4rem;
+            }
+
+            .title-line .head-highlight {
+                font-size: 4.8rem;
             }
 
             .tech-highlight {
@@ -309,11 +349,11 @@
 
         /** Google Font **/
         @font-face {
-            font-family: 'Raleway';
+            font-family: 'Fira Code';
             font-style: normal;
             font-weight: 300;
             font-display: swap;
-            src: url(https://fonts.gstatic.com/s/raleway/v19/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEorCIPrcVIT9d0c8.woff) format('woff');
+            src: url(https://fonts.gstatic.com/s/firacode/v17/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_GNsJVD7MOzlojwUKQ.woff) format('woff');
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
 
@@ -384,25 +424,27 @@
 
     <main class="container">
         <section id="blurb">
-            <p>
-                <span class="head-highlight">Hello!</span> My name is <span class="head-highlight">Phil Wright-
-                    Christie</span>
+            <p class="title-line">
+                <span class="head-highlight">Hello!</span> My name is <span class="head-highlight">Phil
+                    Wright-Christie</span>.
             </p>
             <p>
-                and I am a <span class="head-highlight">Lead DevOps Engineer</span> working at <span
-                    class="head-highlight">KPMG UK.</span>
-            </p>
-
-            <p>
-                On a day to day basis, I work with <span class="tech-highlight">Terraform, Python, Kubernetes &amp;
-                    Ansible</span> as well other technologies on the <span class="tech-highlight">Google Cloud
-                    Platform.</span>
+                I am a <span class="head-highlight">Lead DevOps Engineer</span> working at <span
+                    class="head-highlight">KPMG UK</span>.
             </p>
 
             <p>
-                I currently hold the <span class="cert-highlight">Professional Cloud Architect</span>
-                and <span class="cert-highlight">Professional Cloud Security Engineer</span>
-                GCP certifications
+                On a day to day basis, I work with <span class="tech-highlight">Terraform</span>, <span
+                    class="tech-highlight">Python</span>, <span class="tech-highlight">Kubernetes</span> &amp;
+                <span class="tech-highlight">Ansible</span> as well other technologies on the <span
+                    class="tech-highlight">Google Cloud
+                    Platform</span>.
+            </p>
+
+            <p>
+                I currently hold the <span class="cert-highlight">Professional Cloud Architect</span>,
+                <span class="cert-highlight">Professional Cloud Security Engineer</span> and
+                <span class="cert-highlight">Professional Cloud Developer</span> GCP certifications.
             </p>
 
             <p>
