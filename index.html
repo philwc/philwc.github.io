@@ -102,6 +102,14 @@
             -webkit-text-fill-color: transparent;
         }
 
+        body.unicorn a {
+            color: #272822;
+        }
+
+        body.unicorn a:hover {
+            color: #C9B1FF;
+        }
+
         @keyframes gradient {
             0% {
                 background-position: 50% 0%;
@@ -140,7 +148,7 @@
             align-content: center;
             align-items: center;
             margin-top: 1em;
-            width: 65%;
+            width: 75%;
             padding: 0;
             font-size: 0.95em;
         }
@@ -274,7 +282,7 @@
             }
 
             .head-highlight {
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             .title-line .head-highlight {
@@ -282,11 +290,11 @@
             }
 
             .tech-highlight {
-                font-size: 3rem;
+                font-size: 2rem;
             }
 
             .cert-highlight {
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }
 
@@ -304,12 +312,16 @@
 
         .cert-highlight a {
             color: #A6E22E;
-            text-decoration: none;
         }
 
-        .cert-highlight a:hover {
-            text-decoration: underline;
+        a {
+            color: #ffffff;
         }
+
+        a:hover {
+            color: #aaa;
+        }
+
 
         /** Google Font **/
         @font-face {
@@ -377,7 +389,7 @@
     <main class="container">
         <section id="blurb">
             <p class="title-line">
-                <span class="head-highlight">Hello!</span> My name is <br /><span class="head-highlight">Phil
+                <span class="head-highlight">Hello!</span> My name is <span class="head-highlight">Phil
                     Wright-Christie</span>.
             </p>
             <p>
@@ -386,10 +398,11 @@
             </p>
 
             <p>
-                On a day to day basis, I work with <span class="tech-highlight">Terraform</span>, <span
-                    class="tech-highlight">Python</span>, <span class="tech-highlight">Kubernetes</span> &amp;
-                <span class="tech-highlight">Ansible</span> as well other technologies on the <span
-                    class="tech-highlight">Google Cloud
+                On a day-to-day basis, I use my expertise in technologies like <span
+                    class="tech-highlight">Terraform</span>, <span class="tech-highlight">Python</span>, <span
+                    class="tech-highlight">Gemini</span> and <span class="tech-highlight">Kubernetes</span> to
+                design and build
+                scalable, secure cloud infrastructures on the <span class="tech-highlight">Google Cloud
                     Platform</span>.
             </p>
 
@@ -426,8 +439,15 @@
 
             <p>
                 I also have over twenty years experience working with other technologies, including <span
-                    class="tech-highlight">PHP</span>, <span class="tech-highlight">Linux</span> and <span
+                    class="tech-highlight">TypeScript/React</span>, <span class="tech-highlight">Docker</span>, <span
+                    class="tech-highlight">Linux</span>, <span class="tech-highlight">PHP</span> and <span
                     class="tech-highlight">MySQL</span>.
+            </p>
+
+            <p>When I'm not in the cloud, I enjoy teaching Python at local schools, reading, and walking</p>
+
+            <p>Interested in learning more or discussing cloud strategy? <a target="_blank" rel="noopener"
+                    title="LinkedIn" href="https://www.linkedin.com/in/philwc/">Let's connect on LinkedIn.</a>
             </p>
         </section>
 
@@ -478,25 +498,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                         <path
                             d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
-                    </svg> <br> Google Cloud certs
-                </a>
-            </li>
-            <li>
-                <a target="_blank" rel="noopener" title="Credly (Github)"
-                    href="https://www.credly.com/users/phil-christie">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
-                    </svg> <br> Github certs
-                </a>
-            </li>
-            <li>
-                <a target="_blank" rel="noopener" title="Credly (Hashicorp)"
-                    href="https://www.credly.com/users/phil-wright-christie/badges">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                            d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
-                    </svg> <br> Hashicorp certs
+                    </svg> <br> Certifications
                 </a>
             </li>
         </ul>
