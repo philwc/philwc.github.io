@@ -13,22 +13,37 @@
     </script>
 
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#272822">
     <link rel="canonical" href="https://philwc.dev" />
 
     <!-- Preload Fonts -->
     <link rel="preload"
         href="https://fonts.gstatic.com/s/firacode/v17/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_GNsJVD7MOzlojwUKQ.woff"
-        type="font/woff " crossorigin as="font">
+        type="font/woff" crossorigin as="font">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Hello, my name is Phil Wright- Christie, and I am a Cloud Capability Lead">
+    <meta name="description" content="Phil Wright-Christie is a Cloud Capability Lead at KPMG UK, specialising in Google Cloud Platform architecture, Terraform, Kubernetes, and Python. Google Cloud Authorised Trainer with multiple GCP and GitHub certifications.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://philwc.dev">
+    <meta property="og:title" content="Phil Wright-Christie | Cloud Capability Lead & Google Cloud Architect">
+    <meta property="og:description" content="Cloud Capability Lead at KPMG UK. Google Cloud Authorised Trainer specialising in GCP architecture, Terraform, Kubernetes, and Python.">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Phil Wright-Christie | Cloud Capability Lead & Google Cloud Architect">
+    <meta name="twitter:description" content="Cloud Capability Lead at KPMG UK. Google Cloud Authorised Trainer specialising in GCP architecture, Terraform, Kubernetes, and Python.">
 
     <!-- OOOOHHHH, SECRETS!-->
     <meta name="secret-gradient-key" content="helloworld">
     <meta name="secret-unicorn-key" content="unicorn">
 
-    <title>Phil Wright- Christie</title>
+    <title>Phil Wright-Christie | Cloud Capability Lead & Google Cloud Architect</title>
     <style>
         body {
             font-size: 1rem;
@@ -40,6 +55,11 @@
 
         svg {
             fill: #ffffff
+        }
+
+        h1, h2 {
+            font-weight: normal;
+            margin: 0;
         }
 
         .title-line {
@@ -348,6 +368,59 @@
         }
     </style>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Phil Wright-Christie",
+        "url": "https://philwc.dev",
+        "jobTitle": "Cloud Capability Lead",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "KPMG UK"
+        },
+        "knowsAbout": ["Google Cloud Platform", "Terraform", "Kubernetes", "Python", "TypeScript", "React", "Docker"],
+        "sameAs": [
+            "https://www.linkedin.com/in/philwc/",
+            "https://github.com/philwc",
+            "https://developers.google.com/profile/u/103756277872977505351",
+            "https://www.credly.com/users/philwc"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Google Cloud Professional Cloud Architect",
+                "url": "https://www.credly.com/badges/183f4118-3727-44c6-b6fc-916209a5d18f"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Google Cloud Professional Cloud Developer",
+                "url": "https://www.credly.com/badges/15f913f6-c220-4f83-973e-c5cb0de4833d"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Google Cloud Professional Cloud DevOps Engineer",
+                "url": "https://www.credly.com/badges/982fe0bc-b0a2-4e96-98f3-5ff4cc3105f2"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "GitHub Actions",
+                "url": "https://www.credly.com/badges/a5df3486-1b19-44d8-8a82-e3924f826708/public_url"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "GitHub Advanced Security",
+                "url": "https://www.credly.com/badges/30cc401b-64b0-4f07-bc1a-c0670afe492d/public_url"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "HashiCorp Terraform Associate",
+                "url": "https://www.credly.com/badges/ed385a4c-a283-4d3a-b343-6d9c0d9bd4d8/public_url"
+            }
+        ]
+    }
+    </script>
+
     <script>
         let buffer = [];
         let secretGradientEnabled = false;
@@ -388,14 +461,14 @@
 
     <main class="container">
         <section id="blurb">
-            <p class="title-line">
+            <h1 class="title-line">
                 <span class="head-highlight">Hello!</span> My name is <span class="head-highlight">Phil
                     Wright-Christie</span>.
-            </p>
-            <p>
+            </h1>
+            <h2>
                 I am a <span class="head-highlight">Cloud Capability Lead</span> working at <span
                     class="head-highlight">KPMG UK</span>.
-            </p>
+            </h2>
 
             <p>
                 On a day-to-day basis, I use my expertise in technologies like <span
@@ -420,16 +493,16 @@
                 Google Cloud certifications, as well as the
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/a5df3486-1b19-44d8-8a82-e3924f826708/public_url">
-                        Github Actions</a></span>
+                        GitHub Actions</a></span>
                 and
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/30cc401b-64b0-4f07-bc1a-c0670afe492d/public_url">
-                        Github Advanced Security</a></span>
-                Github, and the
+                        GitHub Advanced Security</a></span>
+                certifications from GitHub, and the
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/ed385a4c-a283-4d3a-b343-6d9c0d9bd4d8/public_url">
                         Terraform Associate</a></span>
-                Hashicorp certifications. I am also a <span class="cert-highlight"><a
+                certification from HashiCorp. I am also a <span class="cert-highlight"><a
                         href="https://www.credential.net/4eb367c4-bc65-477e-ae35-6fb7eed88177">Google Cloud
                         Authorised Trainer</a></span>.
             </p>
@@ -451,7 +524,7 @@
         <ul id="contact">
             <li>
                 <a title="Email" href="mailto:philwc@gmail.com">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" role="img" aria-label="Email icon">
                         <path
                             d="M215.4 96H144 107.8 96v8.8V144v40.4 89L.2 202.5c1.6-18.1 10.9-34.9 25.7-45.8L48 140.3V96c0-26.5 21.5-48 48-48h76.6l49.9-36.9C232.2 3.9 243.9 0 256 0s23.8 3.9 33.5 11L339.4 48H416c26.5 0 48 21.5 48 48v44.3l22.1 16.4c14.8 10.9 24.1 27.7 25.7 45.8L416 273.4v-89V144 104.8 96H404.2 368 296.6 215.4zM0 448V242.1L217.6 403.3c11.1 8.2 24.6 12.7 38.4 12.7s27.3-4.4 38.4-12.7L512 242.1V448v0c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v0zM176 160H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
                     </svg><br> philwc@gmail.com
@@ -459,15 +532,15 @@
             </li>
             <li>
                 <a title="Mobile" href="tel:07554008384">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" role="img" aria-label="Phone icon">
                         <path
                             d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
                     </svg> <br> 07554008384
                 </a>
             </li>
             <li>
-                <a target="_blank" rel="noopener" title="Github" href="https://github.com/philwc">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                <a target="_blank" rel="noopener" title="GitHub" href="https://github.com/philwc">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512" role="img" aria-label="GitHub icon">
                         <path
                             d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
                     </svg> <br> philwc
@@ -475,7 +548,7 @@
             </li>
             <li>
                 <a target="_blank" rel="noopener" title="LinkedIn" href="https://www.linkedin.com/in/philwc/">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" role="img" aria-label="LinkedIn icon">
                         <path
                             d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
                     </svg> <br> philwc
@@ -484,15 +557,15 @@
             <li>
                 <a target="_blank" rel="noopener" title="Google Dev Profile"
                     href="https://developers.google.com/profile/u/103756277872977505351">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512" role="img" aria-label="Google icon">
                         <path
                             d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
                     </svg> <br> philwc
                 </a>
             </li>
             <li>
-                <a target="_blank" rel="noopener" title="Credly" href="https://www.credly.com/users/philwc">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <a target="_blank" rel="noopener" title="Credly" href="https://www.credly.com/users/phil-wright-christie/badges/credly">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" role="img" aria-label="Credly icon">
                         <path
                             d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.3-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
                     </svg> <br> Certifications
