@@ -1,0 +1,28 @@
+# Phil Wright-Christie
+
+> Cloud Capability Lead at KPMG UK. Google Cloud Authorised Trainer.
+
+Phil Wright-Christie is a Cloud Capability Lead working at KPMG UK. Specialising in Terraform, Python, Gemini, Kubernetes, and Google Cloud Platform.
+
+## Certifications
+
+- [Google Cloud Professional Cloud Architect](https://www.credly.com/badges/183f4118-3727-44c6-b6fc-916209a5d18f)
+- [Google Cloud Professional Cloud Developer](https://www.credly.com/badges/15f913f6-c220-4f83-973e-c5cb0de4833d)
+- [Google Cloud Professional Cloud DevOps Engineer](https://www.credly.com/badges/982fe0bc-b0a2-4e96-98f3-5ff4cc3105f2)
+- [GitHub Actions](https://www.credly.com/badges/a5df3486-1b19-44d8-8a82-e3924f826708/public_url)
+- [GitHub Advanced Security](https://www.credly.com/badges/30cc401b-64b0-4f07-bc1a-c0670afe492d/public_url)
+- [HashiCorp Terraform Associate](https://www.credly.com/badges/ed385a4c-a283-4d3a-b343-6d9c0d9bd4d8/public_url)
+- [Google Cloud Authorised Trainer](https://www.credential.net/4eb367c4-bc65-477e-ae35-6fb7eed88177)
+
+## Technologies
+
+Primary: Terraform, Python, Gemini, Kubernetes, Google Cloud Platform
+Additional: TypeScript/React, Docker, Linux, PHP, MySQL
+
+## Links
+
+- Website: https://philwc.dev
+- GitHub: https://github.com/philwc
+- LinkedIn: https://www.linkedin.com/in/philwc/
+- Google Dev Profile: https://developers.google.com/profile/u/103756277872977505351
+- Credly: https://www.credly.com/users/phil-wright-christie/badges/credly
