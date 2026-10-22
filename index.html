@@ -44,22 +44,219 @@
     <meta name="twitter:description" content="Cloud Capability Lead at KPMG UK. Google Cloud Authorised Trainer specialising in Google Cloud architecture, Terraform, Kubernetes, and Python.">
     <meta name="twitter:image" content="https://philwc.dev/og-image.png">
 
-    <!-- OOOOHHHH, SECRETS!-->
-    <meta name="secret-gradient-key" content="helloworld">
-    <meta name="secret-unicorn-key" content="unicorn">
-
     <title>Phil Wright-Christie | Cloud Capability Lead & Google Cloud Architect</title>
     <style>
+        :root {
+            --bg-primary: #272822;
+            --bg-secondary: #272822;
+            --text-primary: #F8F8F2;
+            --svg-fill: #ffffff;
+            --accent-head: #F92672;
+            --accent-tech: #AE81FF;
+            --accent-cert: #A6E22E;
+            --link-color: #ffffff;
+            --link-hover-color: #aaa;
+            --link-hover-grad-start: #AE81FF;
+            --link-hover-grad-end: #F92672;
+            --link-hover-svg-fill: #AE81FF;
+            --skip-link-bg: #000000;
+        }
+
+        [data-theme="dracula"] {
+            --bg-primary: #282a36;
+            --bg-secondary: #282a36;
+            --text-primary: #f8f8f2;
+            --svg-fill: #f8f8f2;
+            --accent-head: #ff79c6;
+            --accent-tech: #bd93f9;
+            --accent-cert: #50fa7b;
+            --link-color: #f8f8f2;
+            --link-hover-color: #8be9fd;
+            --link-hover-grad-start: #bd93f9;
+            --link-hover-grad-end: #ff79c6;
+            --link-hover-svg-fill: #bd93f9;
+            --skip-link-bg: #191a21;
+        }
+
+        [data-theme="catppuccin"] {
+            --bg-primary: #1e1e2e;
+            --bg-secondary: #1e1e2e;
+            --text-primary: #cdd6f4;
+            --svg-fill: #cdd6f4;
+            --accent-head: #f38ba8;
+            --accent-tech: #cba6f7;
+            --accent-cert: #a6e3a1;
+            --link-color: #cdd6f4;
+            --link-hover-color: #89b4fa;
+            --link-hover-grad-start: #cba6f7;
+            --link-hover-grad-end: #f38ba8;
+            --link-hover-svg-fill: #cba6f7;
+            --skip-link-bg: #11111b;
+        }
+
+        [data-theme="solarized-dark"] {
+            --bg-primary: #002b36;
+            --bg-secondary: #002b36;
+            --text-primary: #839496;
+            --svg-fill: #93a1a1;
+            --accent-head: #dc322f;
+            --accent-tech: #6c71c4;
+            --accent-cert: #859900;
+            --link-color: #93a1a1;
+            --link-hover-color: #2aa198;
+            --link-hover-grad-start: #6c71c4;
+            --link-hover-grad-end: #dc322f;
+            --link-hover-svg-fill: #6c71c4;
+            --skip-link-bg: #073642;
+        }
+
+        [data-theme="nord"] {
+            --bg-primary: #2e3440;
+            --bg-secondary: #2e3440;
+            --text-primary: #eceff4;
+            --svg-fill: #d8dee9;
+            --accent-head: #bf616a;
+            --accent-tech: #b48ead;
+            --accent-cert: #a3be8c;
+            --link-color: #d8dee9;
+            --link-hover-color: #88c0d0;
+            --link-hover-grad-start: #b48ead;
+            --link-hover-grad-end: #bf616a;
+            --link-hover-svg-fill: #b48ead;
+            --skip-link-bg: #242933;
+        }
+
+        [data-theme="one-dark"] {
+            --bg-primary: #282c34;
+            --bg-secondary: #282c34;
+            --text-primary: #abb2bf;
+            --svg-fill: #abb2bf;
+            --accent-head: #e06c75;
+            --accent-tech: #c678dd;
+            --accent-cert: #98c379;
+            --link-color: #abb2bf;
+            --link-hover-color: #61afef;
+            --link-hover-grad-start: #c678dd;
+            --link-hover-grad-end: #e06c75;
+            --link-hover-svg-fill: #c678dd;
+            --skip-link-bg: #21252b;
+        }
+
+        [data-theme="gruvbox"] {
+            --bg-primary: #282828;
+            --bg-secondary: #282828;
+            --text-primary: #ebdbb2;
+            --svg-fill: #ebdbb2;
+            --accent-head: #fb4934;
+            --accent-tech: #d3869b;
+            --accent-cert: #b8bb26;
+            --link-color: #ebdbb2;
+            --link-hover-color: #fabd2f;
+            --link-hover-grad-start: #d3869b;
+            --link-hover-grad-end: #fb4934;
+            --link-hover-svg-fill: #d3869b;
+            --skip-link-bg: #1d2021;
+        }
+
+        [data-theme="tokyo-night"] {
+            --bg-primary: #1a1b26;
+            --bg-secondary: #1a1b26;
+            --text-primary: #a9b1d6;
+            --svg-fill: #a9b1d6;
+            --accent-head: #f7768e;
+            --accent-tech: #bb9af7;
+            --accent-cert: #9ece6a;
+            --link-color: #a9b1d6;
+            --link-hover-color: #7aa2f7;
+            --link-hover-grad-start: #bb9af7;
+            --link-hover-grad-end: #f7768e;
+            --link-hover-svg-fill: #bb9af7;
+            --skip-link-bg: #16161e;
+        }
+
+        [data-theme="rainbow-unicorn"] {
+            --bg-primary: #FFCAF2;
+            --bg-secondary: #FFCAF2;
+            --text-primary: #2d2a3e;
+            --svg-fill: #2d2a3e;
+            --accent-head: #c4387b;
+            --accent-tech: #6b4fa0;
+            --accent-cert: #2a7a3a;
+            --link-color: #2d2a3e;
+            --link-hover-color: #8b3a9f;
+            --link-hover-grad-start: #6b4fa0;
+            --link-hover-grad-end: #c4387b;
+            --link-hover-svg-fill: #6b4fa0;
+            --skip-link-bg: #e0a0d0;
+        }
+
+        [data-theme="synthwave"] {
+            --bg-primary: #262335;
+            --bg-secondary: #262335;
+            --text-primary: #e0def4;
+            --svg-fill: #e0def4;
+            --accent-head: #fe4450;
+            --accent-tech: #fede5d;
+            --accent-cert: #72f1b8;
+            --link-color: #e0def4;
+            --link-hover-color: #36f9f6;
+            --link-hover-grad-start: #fede5d;
+            --link-hover-grad-end: #fe4450;
+            --link-hover-svg-fill: #fede5d;
+            --skip-link-bg: #1b1720;
+        }
+
+        [data-theme="neon"] {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #0a0a0a;
+            --text-primary: #ffffff;
+            --svg-fill: #ffffff;
+            --accent-head: #ff0055;
+            --accent-tech: #aa00ff;
+            --accent-cert: #00ff88;
+            --link-color: #ffffff;
+            --link-hover-color: #00d4ff;
+            --link-hover-grad-start: #ff0055;
+            --link-hover-grad-end: #ffee00;
+            --link-hover-svg-fill: #ff0055;
+            --skip-link-bg: #000000;
+        }
+
+        [data-theme="hacker"] {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #0a0a0a;
+            --text-primary: #33ff33;
+            --svg-fill: #33ff33;
+            --accent-head: #00ff00;
+            --accent-tech: #00cc44;
+            --accent-cert: #88ff88;
+            --link-color: #33ff33;
+            --link-hover-color: #ccffcc;
+            --link-hover-grad-start: #00ff00;
+            --link-hover-grad-end: #00aa00;
+            --link-hover-svg-fill: #00ff00;
+            --skip-link-bg: #000000;
+        }
+
+        [data-theme="rainbow-unicorn"] body {
+            background: linear-gradient(0deg, #C9B1FF, #FFCAF2, #FFB2B1, #FFF3AD, #BCFFBC, #A2EDFF);
+            background-size: 500% 500%;
+            animation: gradient 10s ease infinite;
+        }
+
         body {
             font-size: 1rem;
             font-family: 'Fira Code', monospace;
-            background: #272822;
-            color: #F8F8F2;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 3.5rem;
+            margin-top: 5rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         svg {
-            fill: #ffffff
+            fill: var(--svg-fill);
+            transition: fill 0.3s ease;
         }
 
         h1, h2 {
@@ -69,70 +266,8 @@
 
         .title-line {
             font-size: 1.8rem;
-        }
-
-        body.gradient {
-            background: linear-gradient(0deg, #F20000, #FF6700, #FFF800, #5AFF00, #0092FF, #7700FF);
-            background-size: 500% 500%;
-            animation: gradient 10s ease infinite;
-        }
-
-        body.gradient svg {
-            fill: #ffffff
-        }
-
-        body.unicorn {
-            background: linear-gradient(0deg, #C9B1FF, #FFCAF2, #FFB2B1, #FFF3AD, #BCFFBC, #A2EDFF);
-            background-size: 500% 500%;
-            animation: gradient 10s ease infinite;
-        }
-
-        body.unicorn svg {
-            fill: #000000
-        }
-
-        body.gradient p,
-        body.gradient #contact {
-            background-color: #272822;
-            border-radius: 0.8em;
-            padding: 0.8em;
-        }
-
-        body.gradient #contact li a:hover {
-            color: #C9B1FF;
-            background: -webkit-linear-gradient(#FFF800, #0092FF);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        body.unicorn p,
-        body.unicorn #contact {
-            background-color: #F8F8F2;
-            color: #272822;
-            border-radius: 0.8em;
-            padding: 0.8em;
-        }
-
-        body.unicorn #contact li a {
-            background-color: #F8F8F2;
-            color: #272822;
-        }
-
-        body.unicorn #contact li a:hover {
-            color: #C9B1FF;
-            background: -webkit-linear-gradient(#C9B1FF, #A2EDFF);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        body.unicorn a {
-            color: #272822;
-        }
-
-        body.unicorn a:hover {
-            color: #C9B1FF;
+            margin-bottom: 2rem;
+            line-height: 5.2rem;
         }
 
         @keyframes gradient {
@@ -187,20 +322,21 @@
         }
 
         #contact li a {
-            color: #F8F8F2;
+            color: var(--text-primary);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         #contact li a:hover {
-            color: #AE81FF;
-            background: -webkit-linear-gradient(#AE81FF, #F92672);
+            color: var(--link-hover-grad-start);
+            background: -webkit-linear-gradient(var(--link-hover-grad-start), var(--link-hover-grad-end));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         #contact li a:hover svg {
-            fill: #AE81FF;
+            fill: var(--link-hover-svg-fill);
         }
 
         .head-highlight {
@@ -324,27 +460,32 @@
         }
 
         .head-highlight {
-            color: #F92672;
+            color: var(--accent-head);
+            transition: color 0.3s ease;
         }
 
         .tech-highlight {
-            color: #AE81FF;
+            color: var(--accent-tech);
+            transition: color 0.3s ease;
         }
 
         .cert-highlight {
-            color: #A6E22E;
+            color: var(--accent-cert);
+            transition: color 0.3s ease;
         }
 
         .cert-highlight a {
-            color: #A6E22E;
+            color: var(--accent-cert);
+            transition: color 0.3s ease;
         }
 
         a {
-            color: #ffffff;
+            color: var(--link-color);
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #aaa;
+            color: var(--link-hover-color);
         }
 
 
@@ -362,14 +503,180 @@
             position: absolute;
             top: -5rem;
             left: 0;
-            background: #000000;
-            color: #F8F8F2;
+            background: var(--skip-link-bg);
+            color: var(--text-primary);
             padding: 8px;
             z-index: 100;
         }
 
         .skip-link:focus {
             top: 0;
+        }
+
+        /* Command Palette */
+        .palette-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+
+        .palette-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .palette-modal {
+            position: relative;
+            top: 20%;
+            margin: 0 auto;
+            max-width: 500px;
+            width: calc(100% - 2rem);
+            background: #1e1e1e;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            line-height: 1.5;
+            font-family: 'Fira Code', monospace;
+            animation: palette-enter 0.15s ease-out;
+        }
+
+        @keyframes palette-enter {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .palette-input {
+            width: 100%;
+            padding: 12px 16px;
+            background: #1e1e1e;
+            border: none;
+            border-bottom: 1px solid #404040;
+            color: #cccccc;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .palette-input::placeholder {
+            color: #666;
+        }
+
+        .palette-list {
+            list-style: none;
+            margin: 0;
+            padding: 4px 0;
+            max-height: 340px;
+            overflow-y: auto;
+        }
+
+        .palette-list li {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            cursor: pointer;
+            color: #cccccc;
+            font-size: 13px;
+            gap: 10px;
+        }
+
+        .palette-list li.active {
+            background: #04395e;
+            color: #ffffff;
+        }
+
+        .palette-list li:hover {
+            background: #2a2d2e;
+        }
+
+        .palette-list li.active:hover {
+            background: #04395e;
+        }
+
+        .palette-swatch {
+            display: inline-flex;
+            gap: 2px;
+            flex-shrink: 0;
+        }
+
+        .palette-swatch span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .palette-check {
+            margin-left: auto;
+            color: #73c991;
+            flex-shrink: 0;
+        }
+
+        .palette-footer {
+            padding: 6px 16px;
+            border-top: 1px solid #404040;
+            color: #666;
+            font-size: 11px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .palette-footer kbd {
+            display: inline-block;
+            padding: 1px 5px;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 3px;
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            color: #ccc;
+        }
+
+        .theme-hint {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 11px;
+            line-height: 1.4;
+            color: var(--text-primary);
+            opacity: 0.4;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            z-index: 50;
+        }
+
+        .theme-hint:hover {
+            opacity: 0.8;
+        }
+
+        .theme-hint.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .theme-hint kbd {
+            display: inline-block;
+            padding: 1px 5px;
+            background: var(--skip-link-bg);
+            border: 1px solid var(--text-primary);
+            border-radius: 3px;
+            font-family: 'Fira Code', monospace;
+            font-size: 10px;
+            opacity: 0.6;
         }
     </style>
 
@@ -427,61 +734,46 @@
     </script>
 
     <script>
-        let buffer = [];
-        let secretGradientEnabled = false;
-        let secretUnicornEnabled = false;
-        const secretGradientKey = document.querySelector("meta[name='secret-gradient-key']").getAttribute('content');
-        const secretUnicornKey = document.querySelector("meta[name='secret-unicorn-key']").getAttribute('content');
-
-        document.addEventListener("keyup", function (e) {
-            // Don't bother if we've already unlocked
-            if (secretGradientEnabled || secretUnicornEnabled) {
-                return
-            }
-
-            // Check if our secret key is in the buffer
-            buffer.push(e.key)
-            if (buffer.join('').indexOf(secretGradientKey) > 0) {
-                document.body.classList.add("gradient");
-                secretGradientEnabled = true;
-                buffer = [];
-            }
-
-            if (buffer.join('').indexOf(secretUnicornKey) > 0) {
-                document.body.classList.add("unicorn");
-                secretUnicornEnabled = true;
-                buffer = [];
-            }
-
-            // No point in keeping our buffer longer than our key
-            if (buffer.length > Math.max(secretGradientKey.length, secretUnicornKey.length)) {
-                buffer.shift();
-            }
-        });
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
     </script>
 </head>
 
 <body>
+    <div id="theme-palette" class="palette-overlay" role="dialog" aria-modal="true" aria-label="Theme selector" hidden>
+        <div class="palette-backdrop"></div>
+        <div class="palette-modal">
+            <input type="text" class="palette-input" placeholder="Select a theme..." aria-label="Filter themes" autocomplete="off" spellcheck="false">
+            <ul class="palette-list" role="listbox"></ul>
+            <div class="palette-footer">
+                <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+                <span><kbd>Enter</kbd> select</span>
+                <span><kbd>Esc</kbd> close</span>
+                <span><kbd>&#8984;K</kbd> toggle</span>
+            </div>
+        </div>
+    </div>
+
     <a class="skip-link" href="#blurb">Skip to main</a>
 
     <main class="container">
         <section id="blurb">
             <h1 class="title-line">
-                <span class="head-highlight">Hello!</span> My name is <span class="head-highlight">Phil
+                <span class="head-highlight">Hello!</span> My name is <span class="head-highlight"><br/>Phil
                     Wright-Christie</span>.
             </h1>
             <h2>
-                I am a <span class="head-highlight">Cloud Capability Lead</span> working at <span
+                I'm a <span class="head-highlight">Cloud Capability Lead</span> working at <span
                     class="head-highlight">KPMG UK</span>.
             </h2>
 
             <p>
-                On a day-to-day basis, I use my expertise in technologies like <span
+                I design and build scalable, secure cloud infrastructures on the <span class="tech-highlight">Google Cloud
+                    Platform</span> using <span
                     class="tech-highlight">Terraform</span>, <span class="tech-highlight">Python</span>, <span
-                    class="tech-highlight">Gemini</span> and <span class="tech-highlight">Kubernetes</span> to
-                design and build
-                scalable, secure cloud infrastructures on the <span class="tech-highlight">Google Cloud
-                    Platform</span>.
+                    class="tech-highlight">Gemini</span>, and <span class="tech-highlight">Kubernetes</span>.
             </p>
 
             <p>
@@ -491,11 +783,14 @@
                         Professional Cloud Architect</a></span>,
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/15f913f6-c220-4f83-973e-c5cb0de4833d">
-                        Professional Cloud Developer</a></span> and
+                        Professional Cloud Developer</a></span>, and
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/982fe0bc-b0a2-4e96-98f3-5ff4cc3105f2">
                         Professional Cloud DevOps Engineer</a></span>
-                Google Cloud certifications, as well as the
+                Google Cloud certifications, and I'm a <span class="cert-highlight"><a
+                        href="https://www.credential.net/4eb367c4-bc65-477e-ae35-6fb7eed88177">Google Cloud
+                        Authorised Trainer</a></span>.
+                I also hold the
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/a5df3486-1b19-44d8-8a82-e3924f826708/public_url">
                         GitHub Actions</a></span>
@@ -507,21 +802,19 @@
                 <span class="cert-highlight">
                     <a href="https://www.credly.com/badges/ed385a4c-a283-4d3a-b343-6d9c0d9bd4d8/public_url">
                         Terraform Associate</a></span>
-                certification from HashiCorp. I am also a <span class="cert-highlight"><a
-                        href="https://www.credential.net/4eb367c4-bc65-477e-ae35-6fb7eed88177">Google Cloud
-                        Authorised Trainer</a></span>.
+                certification from HashiCorp.
             </p>
 
             <p>
-                I have over twenty years of experience working with other technologies, including <span
+                I also bring over twenty years of experience with <span
                     class="tech-highlight">TypeScript/React</span>, <span class="tech-highlight">Docker</span>, <span
-                    class="tech-highlight">Linux</span>, <span class="tech-highlight">PHP</span> and <span
+                    class="tech-highlight">Linux</span>, <span class="tech-highlight">PHP</span>, and <span
                     class="tech-highlight">MySQL</span>.
             </p>
 
             <p>When I'm not in the cloud, I enjoy teaching Python at local schools, reading, and walking.</p>
 
-            <p>Interested in learning more or discussing cloud strategy? <a target="_blank" rel="noopener"
+            <p>Want to talk cloud architecture or training? <a target="_blank" rel="noopener"
                     title="LinkedIn" href="https://www.linkedin.com/in/philwc/">Let's connect on LinkedIn.</a>
             </p>
         </section>
@@ -578,6 +871,185 @@
             </li>
         </ul>
     </main>
+
+    <div class="theme-hint" id="theme-hint" title="Change theme"><kbd>&#8984;K</kbd> theme</div>
+
+    <script>
+        (function() {
+            var themes = [
+                { id: '', name: 'Monokai', colors: ['#272822', '#F92672', '#AE81FF', '#A6E22E'], themeColor: '#272822' },
+                { id: 'dracula', name: 'Dracula', colors: ['#282a36', '#ff79c6', '#bd93f9', '#50fa7b'], themeColor: '#282a36' },
+                { id: 'catppuccin', name: 'Catppuccin Mocha', colors: ['#1e1e2e', '#f38ba8', '#cba6f7', '#a6e3a1'], themeColor: '#1e1e2e' },
+                { id: 'solarized-dark', name: 'Solarized Dark', colors: ['#002b36', '#dc322f', '#6c71c4', '#859900'], themeColor: '#002b36' },
+                { id: 'nord', name: 'Nord', colors: ['#2e3440', '#bf616a', '#b48ead', '#a3be8c'], themeColor: '#2e3440' },
+                { id: 'one-dark', name: 'One Dark', colors: ['#282c34', '#e06c75', '#c678dd', '#98c379'], themeColor: '#282c34' },
+                { id: 'gruvbox', name: 'Gruvbox Dark', colors: ['#282828', '#fb4934', '#d3869b', '#b8bb26'], themeColor: '#282828' },
+                { id: 'tokyo-night', name: 'Tokyo Night', colors: ['#1a1b26', '#f7768e', '#bb9af7', '#9ece6a'], themeColor: '#1a1b26' },
+                { id: 'rainbow-unicorn', name: 'Rainbow Unicorn', colors: ['#C9B1FF', '#FFCAF2', '#FFB2B1', '#A2EDFF'], themeColor: '#1a1a2e' },
+                { id: 'synthwave', name: "Synthwave '84", colors: ['#262335', '#fe4450', '#fede5d', '#72f1b8'], themeColor: '#262335' },
+                { id: 'neon', name: 'Neon', colors: ['#0a0a0a', '#ff0055', '#aa00ff', '#00ff88'], themeColor: '#0a0a0a' },
+                { id: 'hacker', name: 'Hacker', colors: ['#0a0a0a', '#00ff00', '#00cc44', '#88ff88'], themeColor: '#0a0a0a' }
+            ];
+
+            var overlay = document.getElementById('theme-palette');
+            var input = overlay.querySelector('.palette-input');
+            var list = overlay.querySelector('.palette-list');
+            var backdrop = overlay.querySelector('.palette-backdrop');
+            var activeIndex = 0;
+            var filteredThemes = themes.slice();
+
+            function getCurrentTheme() {
+                return document.documentElement.getAttribute('data-theme') || '';
+            }
+
+            var originalTheme = null;
+
+            function previewTheme(id) {
+                if (id) {
+                    document.documentElement.setAttribute('data-theme', id);
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                }
+            }
+
+            function applyTheme(id) {
+                previewTheme(id);
+                if (id) {
+                    localStorage.setItem('theme', id);
+                } else {
+                    localStorage.removeItem('theme');
+                }
+                originalTheme = id;
+                var theme = themes.find(function(t) { return t.id === id; });
+                if (theme) {
+                    var meta = document.querySelector('meta[name="theme-color"]');
+                    if (meta) meta.setAttribute('content', theme.themeColor);
+                }
+            }
+
+            function renderList() {
+                var current = getCurrentTheme();
+                list.innerHTML = '';
+                filteredThemes.forEach(function(theme, i) {
+                    var li = document.createElement('li');
+                    li.setAttribute('role', 'option');
+                    li.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+                    if (i === activeIndex) li.classList.add('active');
+
+                    var swatch = '<span class="palette-swatch">';
+                    theme.colors.forEach(function(c) {
+                        swatch += '<span style="background:' + c + '"></span>';
+                    });
+                    swatch += '</span>';
+
+                    var check = theme.id === current ? '<span class="palette-check">&#10003;</span>' : '';
+
+                    li.innerHTML = swatch + '<span>' + theme.name + '</span>' + check;
+                    li.addEventListener('click', function() {
+                        applyTheme(theme.id);
+                        closePalette(true);
+                    });
+                    li.addEventListener('mouseenter', function() {
+                        var prev = list.querySelector('li.active');
+                        if (prev) {
+                            prev.classList.remove('active');
+                            prev.setAttribute('aria-selected', 'false');
+                        }
+                        li.classList.add('active');
+                        li.setAttribute('aria-selected', 'true');
+                        activeIndex = i;
+                        previewTheme(theme.id);
+                    });
+                    list.appendChild(li);
+                });
+                if (filteredThemes[activeIndex]) {
+                    previewTheme(filteredThemes[activeIndex].id);
+                }
+            }
+
+            function filterThemes(query) {
+                var q = query.toLowerCase();
+                filteredThemes = themes.filter(function(t) {
+                    return t.name.toLowerCase().indexOf(q) !== -1;
+                });
+                activeIndex = 0;
+                renderList();
+            }
+
+            function openPalette() {
+                originalTheme = getCurrentTheme();
+                overlay.hidden = false;
+                input.value = '';
+                filteredThemes = themes.slice();
+                activeIndex = 0;
+                renderList();
+                input.focus();
+            }
+
+            function closePalette(committed) {
+                overlay.hidden = true;
+                input.value = '';
+                if (!committed) previewTheme(originalTheme);
+            }
+
+            function scrollActive() {
+                var items = list.querySelectorAll('li');
+                if (items[activeIndex]) {
+                    items[activeIndex].scrollIntoView({ block: 'nearest' });
+                }
+            }
+
+            input.addEventListener('input', function() {
+                filterThemes(this.value);
+            });
+
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    activeIndex = Math.min(activeIndex + 1, filteredThemes.length - 1);
+                    renderList();
+                    scrollActive();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    activeIndex = Math.max(activeIndex - 1, 0);
+                    renderList();
+                    scrollActive();
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (filteredThemes[activeIndex]) {
+                        applyTheme(filteredThemes[activeIndex].id);
+                        closePalette(true);
+                    }
+                } else if (e.key === 'Escape') {
+                    closePalette();
+                }
+            });
+
+            backdrop.addEventListener('click', closePalette);
+
+            var hint = document.getElementById('theme-hint');
+            hint.addEventListener('click', function() {
+                openPalette();
+            });
+            setTimeout(function() {
+                hint.classList.add('fade-out');
+            }, 5000);
+
+            document.addEventListener('keydown', function(e) {
+                if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                    e.preventDefault();
+                    if (overlay.hidden) {
+                        openPalette();
+                    } else {
+                        closePalette();
+                    }
+                }
+                if (e.key === 'Escape' && !overlay.hidden) {
+                    closePalette();
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
